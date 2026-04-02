@@ -1189,7 +1189,7 @@ function buildWeekSelector(){
     WEEK_SCHEMES.map((s,i)=>
       `<button class="wk-btn${cur===i+1?' active':''}" onclick="setWeek(${i+1})">${i+1}</button>`
     ).join('') +
-    `<div style="font-size:10px;color:var(--muted);font-family:monospace;white-space:nowrap;margin-left:4px">${WEEK_SCHEMES[Math.min(cur-1,4)].label.split('—')[1]?.trim()||''}</div>`;
+    `<div style="font-size:10px;color:var(--muted);font-family:monospace;white-space:nowrap;margin-left:4px">${(WEEK_SCHEMES[Math.min(cur-1,4)].label.split('—')[1]||'').trim()}</div>`;
 }
 
 function setWeek(w){
@@ -1381,7 +1381,7 @@ function logExTyped(id,val,qual,percDiff,spine,notes){
   h[id].push(entry); setH(h);
 }
 function getLastNotes(id){const e=getH()[id]||[];if(!e.length)return null;return e[e.length-1].notes||null;}
-function getLastSpine(id){const e=getH()[id]||[];if(!e.length)return null;return e[e.length-1].spine??null;}
+function getLastSpine(id){const e=getH()[id]||[];if(!e.length)return null;return (e[e.length-1].spine!=null?e[e.length-1].spine:null);}
 function getLastPercDiff(id){const e=getH()[id]||[];if(!e.length)return null;return e[e.length-1].percDiff||null;}
 
 function recordInputHtml(id){
@@ -1553,7 +1553,7 @@ if(w.value||r.value)sets.push({w:w.value||‘0’,r:r.value||‘0’});
 if(!sets.length&&!qualSel[id])return;
 const notesEl=document.getElementById(‘notes-’+id);
 const notesVal=notesEl?notesEl.value.trim()||null:null;
-logExTyped(id,sets,qualSel[id]||null,diffSel[id]||null,spineSel[id]??null,notesVal);
+logExTyped(id,sets,qualSel[id]||null,diffSel[id]||null,(spineSel[id]!=null?spineSel[id]:null),notesVal);
 if(notesEl)notesEl.value=’’;
 } else {
 const valEl=document.getElementById(‘val-’+id);
@@ -1561,7 +1561,7 @@ const val=valEl?parseFloat(valEl.value)||null:null;
 if(!val&&!qualSel[id])return;
 const notesEl2=document.getElementById(‘notes-’+id);
 const notesVal2=notesEl2?notesEl2.value.trim()||null:null;
-logExTyped(id,val,qualSel[id]||null,diffSel[id]||null,spineSel[id]??null,notesVal2);
+logExTyped(id,val,qualSel[id]||null,diffSel[id]||null,(spineSel[id]!=null?spineSel[id]:null),notesVal2);
 if(notesEl2)notesEl2.value=’’;
 if(valEl)valEl.value=’’;
 }
