@@ -6,6 +6,13 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>Training</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2ODAgNjgwIj4KPHJlY3Qgd2lkdGg9IjY4MCIgaGVpZ2h0PSI2ODAiIHJ4PSIxMjAiIGZpbGw9IiMwYTBhMGEiLz4KPGNpcmNsZSBjeD0iMzQwIiBjeT0iMzIwIiByPSIyNDAiIGZpbGw9IiMxMTExMTEiLz4KPHBvbHlnb24gcG9pbnRzPSIzODAsMTAwIDI3MCwzNjAgMzUwLDM2MCAzMDAsNTgwIDQzMCwyOTAgMzQ1LDI5MCA0MjAsMTAwIiBmaWxsPSIjZThmZjQ3IiBvcGFjaXR5PSIwLjk1Ii8+CjxjaXJjbGUgY3g9IjM0MCIgY3k9IjM0MCIgcj0iMjYwIiBmaWxsPSJub25lIiBzdHJva2U9IiNlOGZmNDciIHN0cm9rZS13aWR0aD0iNiIgb3BhY2l0eT0iMC4xNSIvPgo8Y2lyY2xlIGN4PSIxNjAiIGN5PSIxNjAiIHI9IjgiIGZpbGw9IiNlOGZmNDciIG9wYWNpdHk9IjAuMyIvPgo8Y2lyY2xlIGN4PSI1MjAiIGN5PSIxNjAiIHI9IjgiIGZpbGw9IiNlOGZmNDciIG9wYWNpdHk9IjAuMyIvPgo8Y2lyY2xlIGN4PSIxNjAiIGN5PSI1MjAiIHI9IjgiIGZpbGw9IiNlOGZmNDciIG9wYWNpdHk9IjAuMyIvPgo8Y2lyY2xlIGN4PSI1MjAiIGN5PSI1MjAiIHI9IjgiIGZpbGw9IiNlOGZmNDciIG9wYWNpdHk9IjAuMyIvPgo8L3N2Zz4=">
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2ODAgNjgwIj4KPHJlY3Qgd2lkdGg9IjY4MCIgaGVpZ2h0PSI2ODAiIHJ4PSIxMjAiIGZpbGw9IiMwYTBhMGEiLz4KPGNpcmNsZSBjeD0iMzQwIiBjeT0iMzIwIiByPSIyNDAiIGZpbGw9IiMxMTExMTEiLz4KPHBvbHlnb24gcG9pbnRzPSIzODAsMTAwIDI3MCwzNjAgMzUwLDM2MCAzMDAsNTgwIDQzMCwyOTAgMzQ1LDI5MCA0MjAsMTAwIiBmaWxsPSIjZThmZjQ3IiBvcGFjaXR5PSIwLjk1Ii8+CjxjaXJjbGUgY3g9IjM0MCIgY3k9IjM0MCIgcj0iMjYwIiBmaWxsPSJub25lIiBzdHJva2U9IiNlOGZmNDciIHN0cm9rZS13aWR0aD0iNiIgb3BhY2l0eT0iMC4xNSIvPgo8Y2lyY2xlIGN4PSIxNjAiIGN5PSIxNjAiIHI9IjgiIGZpbGw9IiNlOGZmNDciIG9wYWNpdHk9IjAuMyIvPgo8Y2lyY2xlIGN4PSI1MjAiIGN5PSIxNjAiIHI9IjgiIGZpbGw9IiNlOGZmNDciIG9wYWNpdHk9IjAuMyIvPgo8Y2lyY2xlIGN4PSIxNjAiIGN5PSI1MjAiIHI9IjgiIGZpbGw9IiNlOGZmNDciIG9wYWNpdHk9IjAuMyIvPgo8Y2lyY2xlIGN4PSI1MjAiIGN5PSI1MjAiIHI9IjgiIGZpbGw9IiNlOGZmNDciIG9wYWNpdHk9IjAuMyIvPgo8L3N2Zz4=">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Treino">
+<meta name="theme-color" content="#0a0a0a">
+<meta name="mobile-web-app-capable" content="yes">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
 html{height:100%;}
@@ -201,6 +208,33 @@ body{height:100%;background:#0a0a0a;color:#f0f0f0;font-family:-apple-system,syst
 .cs{font-size:11px;font-family:monospace;color:var(--muted);}
 .cs b{color:var(--accent);}
 .no-data{text-align:center;padding:24px;color:var(--muted);font-size:12px;font-family:monospace;}
+
+.serie-block{background:var(--faint);border:1px solid var(--border);border-radius:10px;padding:12px;margin-bottom:8px;}
+.serie-hdr{font-size:11px;font-weight:700;color:var(--accent);font-family:monospace;letter-spacing:0.1em;margin-bottom:8px;}
+.serie-inputs{display:flex;gap:8px;margin-bottom:10px;align-items:flex-end;}
+.serie-kg{width:72px;background:var(--bg);border:1.5px solid var(--border);color:var(--text);padding:8px;font-size:16px;font-family:monospace;font-weight:700;border-radius:8px;text-align:center;-webkit-appearance:none;}
+.serie-reps{width:60px;background:var(--bg);border:1.5px solid var(--border);color:var(--text);padding:8px;font-size:16px;font-family:monospace;font-weight:700;border-radius:8px;text-align:center;-webkit-appearance:none;}
+.serie-kg:focus,.serie-reps:focus{outline:none;border-color:var(--accent);}
+.serie-inp-lbl{font-size:9px;color:var(--muted);font-family:monospace;margin-bottom:3px;}
+.serie-ratings{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-bottom:8px;}
+.sr-block{background:var(--bg);border-radius:8px;padding:8px;}
+.sr-lbl{font-size:9px;color:var(--muted);font-family:monospace;letter-spacing:0.08em;margin-bottom:4px;}
+.sr-btns{display:flex;gap:2px;flex-wrap:wrap;}
+.sr-btn{width:24px;height:24px;border-radius:4px;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:10px;font-weight:700;cursor:pointer;font-family:monospace;padding:0;}
+.sr-btn.sq{background:var(--purple);border-color:var(--purple);color:#000;}
+.sr-btn.sd{background:#fb923c;border-color:#fb923c;color:#000;}
+.sr-btn.ss{background:#f87171;border-color:#f87171;color:#000;}
+.serie-note{width:100%;background:var(--faint);border:1px solid var(--border);color:var(--text);padding:8px 10px;font-size:12px;border-radius:8px;resize:none;min-height:40px;margin-bottom:6px;font-family:-apple-system,system-ui,sans-serif;}
+.serie-save{width:100%;padding:9px;background:var(--faint);border:1.5px solid var(--border);color:var(--text);border-radius:8px;cursor:pointer;font-family:monospace;font-size:12px;font-weight:700;}
+.serie-save:active{background:var(--accent);color:#000;border-color:var(--accent);}
+.serie-feedback{margin-top:8px;padding:10px 12px;border-radius:8px;font-size:12px;font-family:monospace;font-weight:700;display:none;line-height:1.4;}
+.sf-up{background:rgba(74,222,128,0.15);border:1px solid #4ade80;color:#4ade80;}
+.sf-keep{background:rgba(232,255,71,0.1);border:1px solid var(--accent);color:var(--accent);}
+.sf-down{background:rgba(248,113,113,0.15);border:1px solid #f87171;color:#f87171;}
+.sf-tech{background:rgba(167,139,250,0.15);border:1px solid var(--purple);color:var(--purple);}
+.serie-done .serie-hdr{opacity:0.5;}
+.serie-done .serie-hdr::after{content:" ✓";color:#4ade80;}
+.add-serie-btn{width:100%;padding:10px;background:transparent;border:1.5px dashed var(--border);color:var(--muted);border-radius:8px;cursor:pointer;font-family:monospace;font-size:12px;margin-top:4px;}
 </style>
 </head>
 <body>
@@ -1092,32 +1126,11 @@ function exCard(ex){
     <div class="ex-chev">▾</div>
   </div>
   <div class="ex-body" id="b-${ex.id}">
-    ${hasLoad?loadCalcHtml(ex.id):''}
     <div class="howto"><div class="howto-lbl">COMO FAZER</div><div class="howto-txt">${ex.id.startsWith('apneia')?getApneiaProtocol(ex.id==='apneia-dom'?8:ex.id==='apneia-qua'?6:5):ex.how}</div></div>
     ${ex.rest>0?`<div class="rest-row"><div class="rest-info"><div class="rest-lbl">DESCANSO</div><div class="rest-val">${rFmt}</div></div><button class="rest-btn" onclick="startRest(${ex.rest})">INICIAR ▶</button></div>`:''}
     <div class="sets-area">
-      ${recordInputHtml(ex.id)}
-      ${type!=='check'?`
-      <div class="rating-row">
-        <div class="rating-lbl">Técnica:</div>
-        <div class="r-btns" id="qual-${ex.id}">
-          ${[1,2,3,4,5,6,7,8,9,10].map(n=>`<button class="r-btn" id="qb-${ex.id}-${n}" onclick="selQual('${ex.id}',${n})">${n}</button>`).join('')}
-        </div>
-      </div>
-      <div class="rating-row" style="margin-top:4px">
-        <div class="rating-lbl">Dificuldade:</div>
-        <div class="r-btns" id="diff-${ex.id}">
-          ${[1,2,3,4,5,6,7,8,9,10].map(n=>`<button class="r-btn" id="db-${ex.id}-${n}" onclick="selDiff('${ex.id}',${n})">${n}</button>`).join('')}
-        </div>
-      </div>
-      <div class="rating-row" style="margin-top:4px;background:#1a0f0f">
-        <div class="rating-lbl" style="color:#f87171">Coluna:</div>
-        <div class="r-btns" id="spine-${ex.id}">
-          ${[0,1,2,3,4,5,6,7,8,9,10].map(n=>`<button class="r-btn" id="sb-${ex.id}-${n}" onclick="selSpine('${ex.id}',${n})">${n}</button>`).join('')}
-        </div>
-      </div>`:''
-      }
-      ${type!=='check'?`<button class="save-btn" onclick="saveEx('${ex.id}')">SALVAR ✓</button>`:''}
+      ${hasLoad?loadCalcHtml(ex.id):''}
+      ${buildSeriesArea(ex.id, ex.sets)}
       <div class="pr-msg" id="pr-${ex.id}">🏆 NOVO RECORDE!</div>
     </div>
   </div>
@@ -1128,7 +1141,7 @@ function selQual(id,n){
   qualSel[id]=n;
   for(let i=1;i<=10;i++){
     const b=document.getElementById('qb-'+id+'-'+i);
-    if(b)b.className='q-btn'+(i===n?' sel-q':'');
+    if(b)b.className='r-btn'+(i===n?' sel-q':'');
   }
 }
 function selDiff(id,n){
@@ -1557,6 +1570,176 @@ function submitReview(){
   saveReview(r);
   buildReview();
   alert('Revisão salva ✓');
+}
+
+
+// ── SERIES POR EXERCICIO ─────────────────────────────────
+const serieData = {};
+const serieState = {};
+const DIFF_TARGET = [6, 7, 7.5, 8.5, 5];
+
+function getDiffTarget() {
+  return DIFF_TARGET[Math.min(getCurWeek()-1, 4)];
+}
+
+function roundTo25(val) {
+  return Math.round(val / 2.5) * 2.5;
+}
+
+function calcSuggestion(kg, qual, diff) {
+  if (diff === null || diff === undefined) return null;
+  var w = parseFloat(kg) || 0;
+  var target = getDiffTarget();
+  var wkNames = ['Hipertrofia','Forca-Hiper','Forca','Forca Max','Deload'];
+  var wkName = wkNames[Math.min(getCurWeek()-1, 4)];
+  var zone = '(alvo sem.' + getCurWeek() + ' \u2014 ' + wkName + ': ' + target + '/10)';
+
+  if (qual !== null && qual !== undefined && qual <= 5) {
+    if (w > 0) {
+      var red = Math.max(roundTo25(w * 0.05), 2.5);
+      return {type:'tech', msg:'Reduz ' + red + 'kg \u2014 tecnica precisa melhorar antes de progredir'};
+    }
+    return {type:'tech', msg:'Reduz o peso \u2014 foca na tecnica primeiro'};
+  }
+  if (qual !== null && qual !== undefined && qual === 6) {
+    return {type:'tech', msg:'Mantem o peso \u2014 melhora a tecnica antes de subir'};
+  }
+
+  var gap = diff - target;
+  var pct;
+  if (gap <= -4)      pct = 0.10;
+  else if (gap <= -2) pct = 0.06;
+  else if (gap <= -1) pct = 0.03;
+  else if (gap <= 1)  pct = 0;
+  else if (gap <= 2)  pct = -0.03;
+  else if (gap <= 3)  pct = -0.06;
+  else                pct = -0.10;
+
+  if (pct === 0) {
+    var msg = w > 0 ? 'Mantem ' + w + 'kg \u2014 dificuldade ideal ' + zone : 'Dificuldade ideal ' + zone;
+    return {type:'keep', msg: msg};
+  }
+  if (w <= 0) {
+    var pctStr = Math.round(Math.abs(pct)*100) + '%';
+    return {type: pct>0?'up':'down', msg: (pct>0?'Aumenta':'Reduz') + ' ~' + pctStr + ' ' + zone + ' \u2014 digite o kg para valor exato'};
+  }
+  var delta = roundTo25(Math.abs(w * pct));
+  var safeMin = w <= 10 ? 0.5 : w <= 20 ? 1.25 : 2.5;
+  var finalDelta = Math.max(delta, safeMin);
+  var newW = roundTo25(w + (pct > 0 ? finalDelta : -finalDelta));
+  if (pct > 0) return {type:'up', msg:'Aumenta para ' + newW + 'kg (+' + finalDelta + 'kg) na proxima sessao ' + zone};
+  else return {type:'down', msg:'Reduz para ' + newW + 'kg (-' + finalDelta + 'kg) na proxima sessao ' + zone};
+}
+
+function showFeedback(id, sIdx, suggestion) {
+  var fb = document.getElementById('sfb-' + id + '-' + sIdx);
+  if (!fb) return;
+  if (!suggestion) { fb.style.display = 'none'; return; }
+  fb.style.display = 'block';
+  fb.className = 'serie-feedback sf-' + suggestion.type;
+  fb.textContent = suggestion.msg;
+}
+
+function selSR(id, sIdx, type, val) {
+  var key = id + '_' + sIdx;
+  if (!serieState[key]) serieState[key] = {qual:null, diff:null, spine:null};
+  serieState[key][type] = val;
+  var pfx = type==='qual' ? 'sq' : type==='diff' ? 'sd' : 'ss';
+  var max = type==='spine' ? 10 : 10;
+  var start = type==='spine' ? 0 : 1;
+  for (var i = start; i <= max; i++) {
+    var b = document.getElementById(pfx + '-' + id + '-' + sIdx + '-' + i);
+    if (b) b.className = 'sr-btn' + (i === val ? ' ' + pfx : '');
+  }
+  var kgEl = document.getElementById('skg-' + id + '-' + sIdx);
+  var kg = kgEl ? kgEl.value : '0';
+  var s = serieState[key];
+  if (s.diff !== null) showFeedback(id, sIdx, calcSuggestion(kg, s.qual, s.diff));
+}
+
+function saveSerie(id, sIdx) {
+  var key = id + '_' + sIdx;
+  var st = serieState[key] || {};
+  var kgEl = document.getElementById('skg-' + id + '-' + sIdx);
+  var rpEl = document.getElementById('srp-' + id + '-' + sIdx);
+  var ntEl = document.getElementById('snt-' + id + '-' + sIdx);
+  if (!serieData[id]) serieData[id] = [];
+  while (serieData[id].length <= sIdx) serieData[id].push({});
+  serieData[id][sIdx] = {
+    kg: kgEl ? kgEl.value : '',
+    reps: rpEl ? rpEl.value : '',
+    qual: st.qual || null,
+    diff: st.diff || null,
+    spine: st.spine != null ? st.spine : null,
+    notes: ntEl ? ntEl.value.trim() : '',
+    saved: true,
+    date: new Date().toISOString()
+  };
+  var h = getH();
+  if (!h[id]) h[id] = [];
+  h[id].push({
+    date: new Date().toISOString(),
+    sets: serieData[id].filter(function(s){return s.saved;}).map(function(s){return {w:s.kg,r:s.reps};}),
+    qual: st.qual, percDiff: st.diff, spine: st.spine,
+    notes: ntEl ? ntEl.value.trim() : ''
+  });
+  setH(h);
+  var block = document.getElementById('sb-' + id + '-' + sIdx);
+  if (block) block.classList.add('serie-done');
+  var kg = kgEl ? kgEl.value : '0';
+  showFeedback(id, sIdx, calcSuggestion(kg, st.qual, st.diff));
+}
+
+function addExtraSerie(id) {
+  if (!serieData[id]) serieData[id] = [];
+  var sIdx = serieData[id].length;
+  serieData[id].push({});
+  var container = document.getElementById('series-container-' + id);
+  if (!container) return;
+  var div = document.createElement('div');
+  div.innerHTML = buildSerieBlock(id, sIdx, true);
+  container.appendChild(div.firstElementChild);
+}
+
+function buildSerieBlock(id, sIdx, isExtra) {
+  var label = isExtra ? 'SERIE EXTRA ' + (sIdx+1) : 'SERIE ' + (sIdx+1);
+  var qBtns = '', dBtns = '', sBtns = '';
+  for (var i=1; i<=10; i++) qBtns += '<button class="sr-btn" id="sq-'+id+'-'+sIdx+'-'+i+'" onclick="selSR(\''+id+'\','+sIdx+',\'qual\','+i+')">'+i+'</button>';
+  for (var i=1; i<=10; i++) dBtns += '<button class="sr-btn" id="sd-'+id+'-'+sIdx+'-'+i+'" onclick="selSR(\''+id+'\','+sIdx+',\'diff\','+i+')">'+i+'</button>';
+  for (var i=0; i<=10; i++) sBtns += '<button class="sr-btn" id="ss-'+id+'-'+sIdx+'-'+i+'" onclick="selSR(\''+id+'\','+sIdx+',\'spine\','+i+')">'+i+'</button>';
+  return '<div class="serie-block" id="sb-'+id+'-'+sIdx+'">'
+    + '<div class="serie-hdr">'+label+'</div>'
+    + '<div class="serie-inputs">'
+    + '<div><div class="serie-inp-lbl">KG</div><input type="number" inputmode="decimal" class="serie-kg" id="skg-'+id+'-'+sIdx+'" placeholder="0" onchange="var _s=serieState[\''+id+'_'+sIdx+'\'];if(_s&&_s.diff!=null)showFeedback(\''+id+'\','+sIdx+',calcSuggestion(this.value,_s.qual,_s.diff))"></div>'
+    + '<div><div class="serie-inp-lbl">REPS</div><input type="number" inputmode="numeric" class="serie-reps" id="srp-'+id+'-'+sIdx+'" placeholder="0"></div>'
+    + '</div>'
+    + '<div class="serie-ratings">'
+    + '<div class="sr-block"><div class="sr-lbl">TECNICA</div><div class="sr-btns">'+qBtns+'</div></div>'
+    + '<div class="sr-block"><div class="sr-lbl">DIFICULDADE</div><div class="sr-btns">'+dBtns+'</div></div>'
+    + '<div class="sr-block" style="background:#1a0f0f"><div class="sr-lbl" style="color:#f87171">COLUNA</div><div class="sr-btns">'+sBtns+'</div></div>'
+    + '</div>'
+    + '<textarea class="serie-note" id="snt-'+id+'-'+sIdx+'" placeholder="Observacao desta serie..."></textarea>'
+    + '<button class="serie-save" onclick="saveSerie(\''+id+'\','+sIdx+')">SALVAR SERIE '+(sIdx+1)+' \u2713</button>'
+    + '<div class="serie-feedback" id="sfb-'+id+'-'+sIdx+'"></div>'
+    + '</div>';
+}
+
+function initSeries(id, prescribedSets) {
+  if (!serieData[id]) {
+    var m = prescribedSets.match(/(\d+)\s*[x\u00d7]/);
+    var n = m ? parseInt(m[1]) : 3;
+    serieData[id] = [];
+    for (var i=0; i<n; i++) serieData[id].push({});
+  }
+  return serieData[id];
+}
+
+function buildSeriesArea(id, prescribedSets) {
+  var series = initSeries(id, prescribedSets);
+  var html = '<div id="series-container-'+id+'">';
+  for (var i=0; i<series.length; i++) html += buildSerieBlock(id, i, false);
+  html += '</div><button class="add-serie-btn" onclick="addExtraSerie(\''+id+'\')">+ Adicionar serie extra</button>';
+  return html;
 }
 
 // ── INIT ──────────────────────────────────────
